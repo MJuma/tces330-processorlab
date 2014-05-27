@@ -1,0 +1,4 @@
+module LabB();
+
+
+endmodule
