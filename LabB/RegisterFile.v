@@ -26,7 +26,7 @@ module RegisterFile( W_data, W_addr, W_en, Ra_addr, Rb_addr, Ra_en, Rb_en, Clk, 
 	-------------------------				-------------------------------------
 	SW[13:10]| A READ ADDRESS
 	-------------------------									 -----------------
-	SW[17:14]| B READ ADDRESS		INPUT_DATA-----\N--->|						|---\16---->A_DATA
+	SW[17:14]| B READ ADDRESS		INPUT_DATA-----\16--->|						|---\16---->A_DATA
 	-------------------------									|						|----\16--->B_DATA
 	KEY[0]	| CLOCK					WRITE_ADDRESS--\4--->|						|
 	-------------------------									|	REGISTER FILE	|<----\4--A_READ_ADDRESS		

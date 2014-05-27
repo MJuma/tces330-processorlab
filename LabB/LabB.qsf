@@ -57,3 +57,9 @@ set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name VERILOG_FILE LabB.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_PIN_LOAD 1 -section_id "3.3-V LVTTL"
+set_global_assignment -name OUTPUT_PIN_LOAD 10 -section_id "3.3-V PCI"
+set_global_assignment -name OUTPUT_PIN_LOAD 10 -section_id "3.3-V PCI-X"
+set_global_assignment -name VERILOG_FILE Mux2_1.v
