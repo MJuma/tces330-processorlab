@@ -1,6 +1,11 @@
 /*
-This is just a test
-
+TCES 330 Spring 2014
+05/27/2014
+Mohammad Juma
+Antonio Orozco
+Brendan Crawford
+Lab B
+This module ####.
 */
 module LabB(SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7);
 	input[17:0] SW;
