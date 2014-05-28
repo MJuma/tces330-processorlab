@@ -1,4 +1,4 @@
-module instruction_register(clock, data, ld, clear, instruction);
+module instruction_register( clock, data, ld, clear, instruction );
 	input 						clock;					// Clock
 	input 			[15:0] 	data;						// Data from the ROM
 	input 					 	ld;						// Load next instruction

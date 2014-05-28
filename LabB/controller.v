@@ -1,12 +1,15 @@
-module controller(Clock, Instruction,
-	D_addr, D_wr, RF_s, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Ra_rd, RF_Rb_addr, RF_Rb_rd, Alu_s0, Id, PC_clr, PC_up);
+module controller(Clock, reset, Instruction,
+	D_addr, D_wr, RF_s, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Ra_rd, RF_Rb_addr, RF_Rb_rd, Alu_s0, Id, PC_clr, PC_up, state_o);
 	input Clock;
+	input reset;
 	input [15:0] Instruction;
 	output reg [7:0] D_addr;
 	output reg D_wr, RF_s, RF_Ra_rd, RF_Rb_rd, RF_W_wr, Id, PC_clr, PC_up;
 	output reg [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr;
 	output reg [2:0] Alu_s0;
+	output state_o;
 	
+	assign state_o = Current_State;
 	reg [3:0] Current_State = 0, Next_State = 0;
 	
 	//------------------------------------------------------------------
@@ -99,6 +102,14 @@ module controller(Clock, Instruction,
 	end //end always
 	
 	always @(posedge Clock) begin
-		Current_State <= Next_State;
+		if ( reset ) begin
+			Next_State <= Init;
+			PC_clr <= 0;
+			PC_up <= 0;
+			ALU_s0 <= 0;
+		end
+		else begin
+			Current_State <= Next_State;
+		end
 	end
 endmodule

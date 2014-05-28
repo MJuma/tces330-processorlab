@@ -71,3 +71,6 @@ set_global_assignment -name VERILOG_FILE Mux2_1.v
 set_global_assignment -name MIF_FILE DataMemory.mif
 set_global_assignment -name QIP_FILE DataMemory.qip
 set_global_assignment -name VERILOG_FILE Datapath.v
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name MIF_FILE InstructionMemory.mif
+set_global_assignment -name QIP_FILE InstructionMemory.qip

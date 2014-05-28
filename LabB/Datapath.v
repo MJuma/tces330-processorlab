@@ -1,8 +1,16 @@
-module DataPath(Clock, Reset, D_addr, D_wr, RF_s, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Ra_rd, RF_Rb_addr, RF_Rb_rd, Alu_s0);
+module DataPath(Clock, Reset, D_addr, D_wr, RF_s, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Ra_rd,
+ RF_Rb_addr, RF_Rb_rd, Alu_s0, alu_a, alu_b, alu_out, rq0, mux_out);
 	input [7:0] D_addr;
 	input D_wr, Clock, RF_s, RF_Ra_rd, RF_Rb_rd, RF_W_wr, Reset;
 	input [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr;
 	input [2:0] Alu_s0;
+	output	[15:0] alu_a, alu_b, alu_out, rq0, mux_out;
+	
+	assign alu_a = Ra_data;
+	assign alu_b = Rb_data;
+	assign alu_out = Alu_s0;
+	assign rq0 = R_data;
+	assign mux_out = MUX_Out;
 	
 	wire [15:0] R_data, Ra_data, Rb_data, ALU_Out, MUX_Out;
 	
