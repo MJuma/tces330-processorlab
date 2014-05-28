@@ -38,3 +38,4 @@ timing/
 testbench/
 *_sim/
 *.qsf
+*.db_info
