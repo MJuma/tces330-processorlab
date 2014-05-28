@@ -37,3 +37,4 @@ simulation/
 timing/
 testbench/
 *_sim/
+*.qsf
