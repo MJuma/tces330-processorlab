@@ -1,15 +1,41 @@
-module program_counter( clock, clear, up, address );
-	input							clock;					// System clock
-	input							clear;					// System clear
-	input							up;						// Increment program counter input
-	output	reg	[15:0]	address;					// Next instructions address
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module is a program counter for the processor.
+*/
+module program_counter ( 
+	clear, 
+	clock, 
+	up, 
+
+	address 
+);
+
+	//-----------------------
+	// Input Ports
+	//-----------------------
+	input	clock;					// System clock
+	input	clear;					// System clear
+	input	up;						// Increment program counter input
+
+	//-----------------------
+	// Output Ports
+	//-----------------------
+	output	reg	[15:0]	address;	// Next instructions address
 	
-	always @ ( posedge clock ) begin
-		if ( clear ) begin
-			address <= 0;
+	always @ ( posedge clock ) 
+		begin
+			if ( clear ) 
+				begin
+					address <= 0;
+				end
+			else if ( up ) 
+				begin
+					address <= address + 16'd4;
+				end
 		end
-		else if ( up ) begin
-			address <= address + 16'd4;
-		end
-	end
 endmodule

@@ -1,115 +1,205 @@
-module controller(Clock, reset, Instruction,
-	D_addr, D_wr, RF_s, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Ra_rd, RF_Rb_addr, RF_Rb_rd, Alu_s0, Id, PC_clr, PC_up, state_o);
-	input Clock;
-	input reset;
-	input [15:0] Instruction;
-	output reg [7:0] D_addr;
-	output reg D_wr, RF_s, RF_Ra_rd, RF_Rb_rd, RF_W_wr, Id, PC_clr, PC_up;
-	output reg [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr;
-	output reg [2:0] Alu_s0;
-	output state_o;
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module is a controller that manager the state machine logic behind 
+the processors control unit.
+*/
+module controller (
+	clock, 
+	reset, 
+	instruction, 
+
+	alu_s0, 
+	ld, 
+	d_addr, 
+	d_wr,
+	pc_clear,
+	pc_up, 
+	rf_ra_addr,
+	rf_ra_rd,
+	rf_rb_addr,
+	rf_rb_rd,
+	rf_s,
+	rf_w_addr,
+	rf_w_wr,
+	state_o
+);
+
+	//-----------------------
+	// Input Ports
+	//-----------------------
+	input 			clock;			// System clock
+	input 			reset;			// System reset
+	input 	[15:0]	instruction;	// Current instruction
+
+	//-----------------------
+	// Output Ports
+	//-----------------------
+	output reg 	[7:0]	d_addr;		// Data Memory address
+	output reg 			d_wr, 		// Data Memory write enable
+	output reg 			rf_s, 		// Register File select
+	output reg 	[3:0]	rf_w_addr, 	// Register File write address
+	output reg 			rf_w_wr, 	// Register File write enable
+	output reg 	[3:0]	rf_ra_addr, // Register File channel A address	
+	output reg 			rf_ra_rd, 	// Register File channel A read enable
+	output reg 	[3:0]	rf_rb_addr; // Register File channel B address
+	output reg 			rf_rb_rd, 	// Register File channel B read enable
+	output reg 	[2:0]	alu_s0;		// ALU select
+	output reg 			ld, 		// Load next instruction from instruction register
+	output reg 			pc_clr, 	// Program Counter Clear
+	output reg 			pc_up;		// Program Counter Incrememnt
+	output 				state_o;	// STATE: FSM State
+
+	//-----------------------
+	// Registers
+	//-----------------------
+	reg  [3:0]	current_state = 0;	// State machines current state
+	reg  [3:0]	next_state = 0;		// State machines next state
 	
-	assign state_o = Current_State;
-	reg [3:0] Current_State = 0, Next_State = 0;
-	
-	//------------------------------------------------------------------
+	//-----------------------
+	// State Machine States
+	//-----------------------
+	localparam 	[3:0] 	INIT_STATE = 4'b0000;		// Initialization state
+	localparam 	[3:0] 	FETCH_STATE = 4'b0001;		// Fetch next instruction state
+	localparam 	[3:0] 	DECODE_STATE = 4'b0010;		// Decode instruction state
+	localparam 	[3:0] 	NOOP_STATE = 4'b0011;		// NoOp state
+	localparam 	[3:0] 	LOAD_A_STATE = 4'b0100;		// Load A state
+	localparam 	[3:0] 	LOAD_B_STATE = 4'b0101;		// Load B state
+	localparam 	[3:0] 	STORE_STATE = 4'b0110;		// Store instruction state
+	localparam 	[3:0] 	ADD_STATE = 4'b0111;		// Add instruction state
+	localparam 	[3:0] 	SUBTRACT_STATE = 4'b1000; 	// Subtract instruction state
+	localparam 	[3:0] 	HALT_STATE = 4'b1001;		// Halt instruction state
+
+	//-----------------------
 	// Instruction Set
-	//------------------------------------------------------------------
-	localparam	[3:0]	noop = 4'b0000;		// NOOP Instruction 0000
-	localparam	[3:0]	store = 4'b0001;		// STORE Instruction 0001
-	localparam	[3:0]	load = 4'b0010;		// LOAD Instruction 0010
-	localparam	[3:0]	add = 4'b0011;			// ADD Instruction 0011
-	localparam	[3:0]	subtract = 4'b0100;	// SUBTRACT Instruction 0100
-	localparam	[3:0]	halt = 4'b0101;		// HALT Instruction 0101
-	
-	
-	
-	//Initialize states
-	localparam Init = 4'b0000, Fetch = 4'b0001, Decode = 4'b0010,
-					NOOP = 4'b0011, LOAD_A = 4'b0100, LOAD_B = 4'b0101,
-					STORE = 4'b0110, ADD = 4'b0111, SUB = 4'b1000, HALT = 4'b1001;
+	//-----------------------
+	localparam	[3:0]	NOOP = 4'b0000;				// NOOP Instruction 0000
+	localparam	[3:0]	STORE = 4'b0001;			// STORE Instruction 0001
+	localparam	[3:0]	LOAD = 4'b0010;				// LOAD Instruction 0010
+	localparam	[3:0]	ADD = 4'b0011;				// ADD Instruction 0011
+	localparam	[3:0]	SUBTRACT = 4'b0100;			// SUBTRACT Instruction 0100
+	localparam	[3:0]	HALT = 4'b0101;				// HALT Instruction 0101
+
+	assign state_o = current_state;
 					
-	always @ (Current_State) begin
-		case (Current_State)
-			Init: begin
-					PC_clr = 1;
-					Next_State = Fetch;
+	always @ ( current_state ) 
+		begin
+			case ( current_state )
+				INIT_STATE: 
+					begin
+						pc_clr = 1;
+						next_state = FETCH_STATE;
 					end
-					
-			Fetch: begin 
-					PC_up = 1;
-					Id = 1;
+				FETCH_STATE: 
+					begin 
+						pc_up = 1;
+						ld = 1;
 					end 
-					
-			Decode: 	case (Instruction[15:12])
-						noop : Next_State = NOOP;	
-						load : Next_State = LOAD_A;
-						store : Next_State = STORE;
-						add : Next_State = ADD;
-						subtract : Next_State = SUB;
-						halt : Next_State = HALT;
+				DECODE_STATE:
+					begin 	
+						case ( instruction[15:12] )
+							NOOP: 
+								begin
+									next_state = NOOP_STATE;
+								end	
+							LOAD: 
+								begin
+									next_state = LOAD_A_STATE;
+								end
+							STORE: 
+								begin
+									next_state = STORE_STATE;
+								end
+							ADD: 
+								begin
+									next_state = ADD_STATE;
+								end
+							SUBTRACT: 
+								begin
+									next_state = SUBTRACT_STATE;
+								end
+							HALT: 
+								begin
+									next_state = HALT_STATE;
+								end
 						endcase
-			NOOP: Next_State = Fetch;
-			
-			LOAD_A: 	begin
-						D_addr = Instruction[11:4];
-						RF_s = 1;
-						RF_W_addr = Instruction[3:0];
-						Next_State = LOAD_B;
-						end 
-						
-			LOAD_B: 	begin
-						D_addr = D_addr = Instruction[11:4];
-						RF_s = 1;
-						RF_W_addr = Instruction[3:0];
-						RF_W_wr = 1;
-						Next_State = Fetch;
-						end
-						
-			STORE: 	begin
-						D_addr = Instruction[7:0];
-						D_wr = 1;
-						RF_Ra_addr = Instruction[11:8];
-						RF_Ra_rd = 1;
-						Next_State = Fetch;
-						end
-						
-			ADD: 	begin
-					RF_W_addr = Instruction[3:0];
-					RF_W_wr = 1;
-					RF_Ra_addr = Instruction[11:8];
-					RF_Ra_rd = 1;
-					RF_Rb_addr = Instruction[7:4];
-					RF_Rb_rd = 1;
-					ALU_s0 = 1;
-					Next_State = Fetch;
 					end
-					
-			SUB:	begin
-					RF_W_addr = Instruction[3:0];
-					RF_W_wr = 1;
-					RF_Ra_addr = Instruction[11:8];
-					RF_Ra_rd = 1;
-					RF_Rb_addr = Instruction[7:4];
-					RF_Rb_rd = 1;
-					ALU_s0 = 2;
-					Next_State = Fetch;
+				NOOP_STATE: 
+					begin
+						next_state = FETCH_STATE;
 					end
-			
-			HALT: Next_State = HALT;
-		default: Next_State = 4'bxxxx;
-		endcase
-	end //end always
+				LOAD_A_STATE: 	
+					begin
+						d_addr = instruction[11:4];
+						rf_s = 1;
+						rf_w_addr = instruction[3:0];
+						next_state = LOAD_B_STATE;
+					end 
+				LOAD_B_STATE: 	
+					begin
+						d_addr = d_addr = instruction[11:4];
+						rf_s = 1;
+						rf_w_addr = instruction[3:0];
+						rf_w_wr = 1;
+						next_state = FETCH_STATE;
+					end
+				STORE_STATE: 	
+					begin
+						d_addr = instruction[7:0];
+						d_wr = 1;
+						rf_ra_addr = instruction[11:8];
+						rf_ra_rd = 1;
+						next_state = FETCH_STATE;	
+					end
+				ADD_STATE: 	
+					begin
+						rf_w_addr = instruction[3:0];
+						rf_w_wr = 1;
+						rf_ra_addr = instruction[11:8];
+						rf_ra_rd = 1;
+						rf_rb_addr = instruction[7:4];
+						rf_rb_rd = 1;
+						alu_s0 = 1;
+						next_state = FETCH_STATE;
+					end
+				SUBTRACT_STATE:	
+					begin
+						rf_w_addr = instruction[3:0];
+						rf_w_wr = 1;
+						rf_ra_addr = instruction[11:8];
+						rf_ra_rd = 1;
+						rf_rb_addr = Instruction[7:4];
+						rf_rb_rd = 1;
+						alu_s0 = 2;
+						next_state = FETCH_STATE;
+					end
+				HALT_STATE: 
+					begin 
+						next_state = HALT_STATE;
+					end
+				default: 
+					begin
+						next_state = 4'bxxxx;
+					end
+			endcase
+		end //end always
 	
-	always @(posedge Clock) begin
-		if ( reset ) begin
-			Next_State <= Init;
-			PC_clr <= 0;
-			PC_up <= 0;
-			ALU_s0 <= 0;
+	always @ ( posedge clock ) 
+		begin
+			if ( reset ) 
+				begin
+					next_state <= INIT_STATE;
+					pc_clr <= 0;
+					pc_up <= 0;
+					alu_s0 <= 0;
+				end
+			else 
+				begin
+					current_state <= next_state;
+				end
 		end
-		else begin
-			Current_State <= Next_State;
-		end
-	end
 endmodule
