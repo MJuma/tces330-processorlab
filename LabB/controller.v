@@ -86,7 +86,7 @@ module controller (
 
     assign state_o = current_state;
                     
-    always @ ( current_state ) 
+    always @ ( current_state, instruction ) 
         begin
             case ( current_state )
                 INIT_STATE: 
@@ -111,6 +111,15 @@ module controller (
                     end 
                 DECODE_STATE:
                     begin   
+                        pc_up = pc_up;
+                        ld = ld;
+                        pc_clr = pc_clr;
+                        rf_s = rf_s;
+                        rf_w_wr = rf_w_wr;
+                        d_wr = d_wr;
+                        rf_ra_rd = rf_ra_rd;
+                        rf_rb_rd = rf_rb_rd;
+                        alu_s0 = alu_s0;
                         case ( instruction[15:12] )
                             NOOP: 
                                 begin
@@ -135,6 +144,10 @@ module controller (
                             HALT: 
                                 begin
                                     next_state = HALT_STATE;
+                                end
+                            default: 
+                                begin
+                                    next_state = 4'bxxxx;
                                 end
                         endcase
                     end

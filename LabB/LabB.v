@@ -57,12 +57,12 @@ module LabB (
     wire [15:0]     mux_out;    // Datapath Mux Output
 
     assign LEDR = SW;           //assigns the red LED's to the input switches
-    assign S = SW[17:15];       //3-bit select line
+    assign select = SW[17:15];       //3-bit select line
     assign clock = KEY[0];
     assign reset = ~KEY[1];
 
     //The Processor
-    processor (
+    processor proc0 (
         .clock ( clock ), 
         .reset ( reset ), 
         .alu_a ( alu_a ), 
@@ -77,15 +77,15 @@ module LabB (
 
 
     // 8 to 1 Multiplexer
-    mux8_1 mux (
+    mux8_1 mux0 (
         .input0 ( {7'b0000_000, pc_out, state_o} ), // S = 0 => HEX7 = 0; HEX6, HEX5 = PC; HEX4 = Current State;
         .input1 ( alu_a ),                          // S = 1 => HEX7, 6, 5, 4 = ALU_A (A-side input to ALU)
         .input2 ( alu_b ),                          // S = 2 => HEX7, 6, 5, 4 = ALU_B (B-side input to ALU)
         .input3 ( alu_out ),                        // S = 3 => HEX7, 6, 5, 4 = ALU_Out (ALU output)
-        .input4 ( 16'h0000 ),                        // S = 4 => Unused (use this for your own debug information)
+        .input4 ( 16'h0000 ),                       // S = 4 => Unused (use this for your own debug information)
         .input5 ( rq0 ),                            // S = 5 => HEX7, 6, 5, 4 = Register File 0 contents
         .input6 ( mux_out ),                        // S = 6 => HEX7, 6, 5, 4 = Datapath Multiplexer output
-        .input7 ( 16'h0000 ),                        // S = 7 => Unused (use this for your own debug information) 
+        .input7 ( 16'h0000 ),                       // S = 7 => Unused (use this for your own debug information) 
         .select ( select ),                         // The Select line
         .q ( q )                                    // The output
     );

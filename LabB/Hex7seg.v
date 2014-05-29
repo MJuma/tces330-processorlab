@@ -7,7 +7,11 @@ Antonio Orozco
 Lab B
 This module implements a 7-segment decoder (0 through 9)
 */
-module Hex7seg( c, display );
+module Hex7seg( 
+    c, 
+    
+    display
+);
 
     //-----------------------
     // Input Ports

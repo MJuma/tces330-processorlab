@@ -55,12 +55,12 @@ module processor (
     wire            rf_rb_rd;   // Register File channel B read enable
     wire    [2:0]   alu_s0;     // ALU select
     
-    assign pc_out = ir_inst;
+    assign pc_out = ir_inst[4:0];
 
     InstructionMemory inst_mem0 ( 
-        .address ( ir_inst ),
+        .address ( ir_addr ),
         .clock ( clock ), 
-        .q ( ir_addr )
+        .q ( ir_inst )
     );
     
     control_unit con_unit0 (
