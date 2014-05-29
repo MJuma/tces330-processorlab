@@ -40,5 +40,9 @@ module instruction_register (
 				begin
 					instruction <= data;
 				end
+			else
+				begin
+			instruction <= instruction;
+				end
 		end
 endmodule
