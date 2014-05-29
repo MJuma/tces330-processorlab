@@ -82,7 +82,7 @@ module processor (
         .state_o ( state_o )
     );
     
-    datapath dp( clock, reset, d_addr, d_wr, rf_s, rf_w_addr,   rf_w_wr,    rf_ra_addr,
+    DataPath dp( clock, reset, d_addr, d_wr, rf_s, rf_w_addr,   rf_w_wr,    rf_ra_addr,
                             rf_ra_rd,   rf_rb_rd,   rf_rb_addr, alu_s0, alu_a, alu_b, alu_out, rq0, mux_out);
 endmodule
     

@@ -91,15 +91,15 @@ module controller (
             case ( current_state )
                 INIT_STATE: 
                     begin
-                        pc_up <= 0;
-                        alu_s0 <= 0;
+                        pc_up = 0;
+                        alu_s0 = 0;
                         ld = 0;
                         pc_clr = 1;
                         next_state = FETCH_STATE;
                     end
                 FETCH_STATE: 
                     begin
-                        pc_clr <= 0;
+                        pc_clr = 0;
                         pc_up = 1;
                         ld = 1;
                         next_state = DECODE_STATE;
@@ -197,7 +197,7 @@ module controller (
         begin
             if ( reset ) 
                 begin
-                    next_state <= INIT_STATE;
+                    current_state <= INIT_STATE;
                 end
             else 
                 begin
