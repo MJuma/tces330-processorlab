@@ -57,7 +57,7 @@ module LabB (
     wire [15:0]     mux_out;    // Datapath Mux Output
 
     assign LEDR = SW;           //assigns the red LED's to the input switches
-    assign S = SW[17:15];       //3-bit select line
+    assign select = SW[17:15];       //3-bit select line
     assign clock = KEY[0];
     assign reset = ~KEY[1];
 
