@@ -70,7 +70,7 @@ module control_unit (
         .ld ( ld ), 
         .d_addr ( d_addr ), 
         .d_wr ( d_wr ),
-        .pc_clear ( pc_clear ),
+        .pc_clr ( pc_clear ),
         .pc_up ( pc_up ), 
         .rf_ra_addr ( rf_ra_addr ),
         .rf_ra_rd ( rf_ra_rd ),

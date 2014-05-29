@@ -85,7 +85,7 @@ module LabB (
 																mux_out, // S = 6 => HEX7, 6, 5, 4 = Datapath Multiplexer output
 																4'h0000, // S = 7 => Unused (use this for your own debug information) 
 																		S, // The Select line
-																		Q) // The output
+																		Q); // The output
 	//Display the output to the 7 to 1 multiplexer
 	Hex7seg H4 (Q[3:0], HEX4);
 	Hex7seg H5 (Q[7:4], HEX5);

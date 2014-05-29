@@ -17,7 +17,7 @@ module controller (
     ld, 
     d_addr, 
     d_wr,
-    pc_clear,
+    pc_clr,
     pc_up, 
     rf_ra_addr,
     rf_ra_rd,
@@ -40,17 +40,17 @@ module controller (
     // Output Ports
     //-----------------------
     output reg  [7:0]   d_addr;     // Data Memory address
-    output reg          d_wr,       // Data Memory write enable
-    output reg          rf_s,       // Register File select
-    output reg  [3:0]   rf_w_addr,  // Register File write address
-    output reg          rf_w_wr,    // Register File write enable
-    output reg  [3:0]   rf_ra_addr, // Register File channel A address  
-    output reg          rf_ra_rd,   // Register File channel A read enable
+    output reg          d_wr;       // Data Memory write enable
+    output reg          rf_s;       // Register File select
+    output reg  [3:0]   rf_w_addr;  // Register File write address
+    output reg          rf_w_wr;    // Register File write enable
+    output reg  [3:0]   rf_ra_addr; // Register File channel A address  
+    output reg          rf_ra_rd;   // Register File channel A read enable
     output reg  [3:0]   rf_rb_addr; // Register File channel B address
-    output reg          rf_rb_rd,   // Register File channel B read enable
+    output reg          rf_rb_rd;   // Register File channel B read enable
     output reg  [2:0]   alu_s0;     // ALU select
-    output reg          ld,         // Load next instruction from instruction register
-    output reg          pc_clr,     // Program Counter Clear
+    output reg          ld;         // Load next instruction from instruction register
+    output reg          pc_clr;     // Program Counter Clear
     output reg          pc_up;      // Program Counter Incrememnt
     output              state_o;    // STATE: FSM State
 
@@ -146,7 +146,7 @@ module controller (
                     end 
                 LOAD_B_STATE:   
                     begin
-                        d_addr = d_addr = instruction[11:4];
+                        d_addr =  instruction[11:4];
                         rf_s = 1;
                         rf_w_addr = instruction[3:0];
                         rf_w_wr = 1;
@@ -177,7 +177,7 @@ module controller (
                         rf_w_wr = 1;
                         rf_ra_addr = instruction[11:8];
                         rf_ra_rd = 1;
-                        rf_rb_addr = Instruction[7:4];
+                        rf_rb_addr = instruction[7:4];
                         rf_rb_rd = 1;
                         alu_s0 = 2;
                         next_state = FETCH_STATE;
