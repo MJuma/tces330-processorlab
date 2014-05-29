@@ -38,7 +38,7 @@ module control_unit (
     //-----------------------
     // Output Ports
     //-----------------------
-    output  [15:0]  ir_addr;        // Address of next instuction
+    output  [4:0]  ir_addr;        // Address of next instuction
     output  [7:0]   d_addr;         // Data Memory address
     output          d_wr;           // Data Memory write enable
     output          rf_s;           // Register File select

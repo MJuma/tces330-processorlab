@@ -25,7 +25,7 @@ module program_counter (
     //-----------------------
     // Output Ports
     //-----------------------
-    output  reg [15:0]  address;    // Next instructions address
+    output  reg [4:0]  address;    // Next instructions address
     
     always @ ( posedge clock ) 
         begin
