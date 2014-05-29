@@ -1,7 +1,10 @@
 /*
-R. Antonio Orozco
-5/26/2014
-Homework6-Part4
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
 This module implements a 7-segment decoder (0 through 9)
 */
 module Hex7seg( C, Display );

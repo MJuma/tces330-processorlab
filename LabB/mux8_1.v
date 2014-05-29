@@ -21,14 +21,14 @@ module mux8_1 (
     q
 );
 
- //-----------------------
- // Parameters
- //-----------------------
- parameter N = 4;
+    //-----------------------
+    // Parameters
+    //-----------------------
+    parameter N = 4;
    
- //-----------------------
- // Input Ports
- //-----------------------
+    //-----------------------
+    // Input Ports
+    //-----------------------
     input [N-1:0]   input0;    // Input 0 
     input [N-1:0]   input1;    // Input 1
     input [N-1:0]   input2;    // Input 2
@@ -39,9 +39,9 @@ module mux8_1 (
     input [N-1:0]   input7;    // Input 7
     input [2:0]     select;    // Select line
     
- //-----------------------
- // Output Ports
- //-----------------------
+    //-----------------------
+    // Output Ports
+    //-----------------------
     output reg [N-1:0] q;   // Mux output
  
     always @ ( input0, input1, input2, input3,
