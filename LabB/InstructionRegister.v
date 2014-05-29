@@ -13,13 +13,15 @@ module InstructionRegister(Clk, MemOut, InstRegOut, Ld, Clear);
 	input Clear;
 	
 	//Instruction Register output
-	output [15:0] InstRegOut;
+	output reg [15:0] InstRegOut;
 	
-	always @ (Clk) begin
-		if(Clear == 1)
-			InstRegOut <= 0;
-		else if(Ld == 1)
+	always @ (posedge Clk) begin
+		if (Clear)
+			InstRegOut <= 0; //Clear instruction in register
+		else if (Ld)
 			InstRegOut <= MemOut;
+		else
+			InstRegOut <= InstRegOut;
 	end
 	
 endmodule

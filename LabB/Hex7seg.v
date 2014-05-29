@@ -22,10 +22,9 @@ module Hex7seg( C, Display );
   */
   
   // Note: a '0' turns the segment ON
-  // Note: Segment 6 is the left most bit, below
+  // Note: Segment 6 is the left most bit
   always @ ( C )
     case ( C )		  //6......0 <----
-      //0: Display = 7'b100_0000; //0
       1: Display = 7'b111_1001; //1
       2: Display = 7'b010_0100; //2
       3: Display = 7'b011_0000; //3
