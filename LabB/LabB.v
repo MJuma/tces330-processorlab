@@ -59,7 +59,7 @@ module LabB (
     assign LEDR = SW;           //assigns the red LED's to the input switches
     assign S = SW[17:15];       //3-bit select line
     assign clock = KEY[0];
-    assign reset = KEY[1];
+    assign reset = ~KEY[1];
 
     //The Processor
     processor (
@@ -82,10 +82,10 @@ module LabB (
         .input1 ( alu_a ),                          // S = 1 => HEX7, 6, 5, 4 = ALU_A (A-side input to ALU)
         .input2 ( alu_b ),                          // S = 2 => HEX7, 6, 5, 4 = ALU_B (B-side input to ALU)
         .input3 ( alu_out ),                        // S = 3 => HEX7, 6, 5, 4 = ALU_Out (ALU output)
-        .input4 ( 4'h0000 ),                        // S = 4 => Unused (use this for your own debug information)
+        .input4 ( 16'h0000 ),                        // S = 4 => Unused (use this for your own debug information)
         .input5 ( rq0 ),                            // S = 5 => HEX7, 6, 5, 4 = Register File 0 contents
         .input6 ( mux_out ),                        // S = 6 => HEX7, 6, 5, 4 = Datapath Multiplexer output
-        .input7 ( 4'h0000 ),                        // S = 7 => Unused (use this for your own debug information) 
+        .input7 ( 16'h0000 ),                        // S = 7 => Unused (use this for your own debug information) 
         .select ( select ),                         // The Select line
         .q ( q )                                    // The output
     );

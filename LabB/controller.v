@@ -39,20 +39,20 @@ module controller (
     //-----------------------
     // Output Ports
     //-----------------------
-    output reg  [7:0]   d_addr;     // Data Memory address
-    output reg          d_wr;       // Data Memory write enable
-    output reg          rf_s;       // Register File select
-    output reg  [3:0]   rf_w_addr;  // Register File write address
-    output reg          rf_w_wr;    // Register File write enable
-    output reg  [3:0]   rf_ra_addr; // Register File channel A address  
-    output reg          rf_ra_rd;   // Register File channel A read enable
-    output reg  [3:0]   rf_rb_addr; // Register File channel B address
-    output reg          rf_rb_rd;   // Register File channel B read enable
-    output reg  [2:0]   alu_s0;     // ALU select
-    output reg          ld;         // Load next instruction from instruction register
-    output reg          pc_clr;     // Program Counter Clear
-    output reg          pc_up;      // Program Counter Incrememnt
-    output              state_o;    // STATE: FSM State
+    output reg  [7:0]   d_addr = 0;     // Data Memory address
+    output reg          d_wr = 0;       // Data Memory write enable
+    output reg          rf_s = 0;       // Register File select
+    output reg  [3:0]   rf_w_addr = 0;  // Register File write address
+    output reg          rf_w_wr = 0;    // Register File write enable
+    output reg  [3:0]   rf_ra_addr = 0; // Register File channel A address  
+    output reg          rf_ra_rd = 0;   // Register File channel A read enable
+    output reg  [3:0]   rf_rb_addr = 0; // Register File channel B address
+    output reg          rf_rb_rd = 0;   // Register File channel B read enable
+    output reg  [2:0]   alu_s0 = 0;     // ALU select
+    output reg          ld = 0;         // Load next instruction from instruction register
+    output reg          pc_clr = 0;     // Program Counter Clear
+    output reg          pc_up = 0;      // Program Counter Incrememnt
+    output [3:0] state_o;    // STATE: FSM State
 
     //-----------------------
     // Registers
@@ -92,9 +92,14 @@ module controller (
                 INIT_STATE: 
                     begin
                         pc_up = 0;
-                        alu_s0 = 0;
                         ld = 0;
                         pc_clr = 1;
+						rf_s = 0;
+						rf_w_wr = 0;
+						d_wr = 0;
+						rf_ra_rd = 0;
+						rf_rb_rd = 0;
+                        alu_s0 = 0;
                         next_state = FETCH_STATE;
                     end
                 FETCH_STATE: 

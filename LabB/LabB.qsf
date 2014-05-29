@@ -124,6 +124,7 @@ set_parameter -name CYCLONEII_SAFE_WRITE RESTRUCTURE
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SDC_FILE LabB.sdc
 set_global_assignment -name VERILOG_FILE mux8_1.v
 set_global_assignment -name VERILOG_FILE program_counter.v
 set_global_assignment -name VERILOG_FILE control_unit.v

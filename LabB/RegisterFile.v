@@ -5,7 +5,8 @@ Homework6-Part5
 This module implements a dual output register file.
 It contains 16 16-bit registers
 */
-module RegisterFile( W_data, W_addr, W_en, Ra_addr, Rb_addr, Ra_en, Rb_en, Clk, Rst, Ra_data, Rb_data);
+module RegisterFile( W_data, W_addr, W_en, Ra_addr, Rb_addr,
+ Ra_en, Rb_en, Clk, Rst, Ra_data, Rb_data);
 	parameter N = 16;
 	input [3:0] Ra_addr, Rb_addr, W_addr; // 4-bit write address for A, B, and Write address
 	input [N-1:0] W_data; //N-bits of data to write

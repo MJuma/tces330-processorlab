@@ -35,9 +35,7 @@ module program_counter (
                 end
             else if ( up ) 
                 begin
-                    // Remember that the ROM is 32x16, each word is 16-bit(enough for 1 instruction)
-                    //Hence, we increment by 1 (Look at the InstructionMemory.mif if your not convinced)
-                    address <= address + 1;
+                    address <= address + 1'b1;
                 end
             else 
                 begin
