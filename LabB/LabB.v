@@ -24,45 +24,57 @@ module LabB (
 	//-----------------------
 	// Input Ports
 	//-----------------------
-	input	[17:15]	SW;	//Selecte line for the HEX[7:4] (determines what will be displayed)
-	output [17:15]	LEDR; //red LED's
-	assign LEDR = SW; //assigns the red LED's to the input switches
+	input   [17:15]	SW;		// Selecte line for the HEX[7:4] (determines what will be displayed)
+	output 	[17:15]	LEDR; 	// Red LED's
 	input	[1:0]	KEY;	// System clock and reset
 
 	//-----------------------
 	// Output Ports
 	//-----------------------
 	output [6:0] 	HEX0, 	// HEX0 through HEX3 display
-						HEX1, 	// the contents of the IR
-						HEX2, 
-						HEX3, 
-						HEX4,	// Determined by the switches, 
-						HEX5, 	// HEX4 through HEX7 display either
-						HEX6, 	// the contetns of the ALU's, the 
-						HEX7;	// register file or the datapath
+					HEX1, 	// the contents of the IR
+					HEX2, 
+					HEX3, 
+					HEX4,	// Determined by the switches, 
+					HEX5, 	// HEX4 through HEX7 display either
+					HEX6, 	// the contents of the ALU's, the 
+					HEX7;	// register file or the datapath
 	
 	//-----------------------
 	// Wires
 	//-----------------------
-	wire clock;		// The system clock
-	wire reset;		// The synchronous system reset
-	wire [2:0] S;
-	wire [15:0] Q;
-	wire [15:0]	ir_out;		// Instruction Register
-	wire [4:0] pc_out;		// Program Counter
-	wire [3:0] state_o;	// FSM Current State
-	wire [15:0] alu_a;		// ALU A-Side Input
-	wire [15:0] alu_b;		// ALU B-Side Input
-	wire [15:0] alu_out;	// ALU Current Output
-	wire [15:0] rq0;		// RF[0] Contents
-	wire [15:0] mux_out;	// Datapath Mux Output
+	wire 			clock;		// The system clock
+	wire 			reset;		// The synchronous system reset
+	wire [2:0] 		S;
+	wire [15:0] 	Q;
+	wire [15:0]		ir_out;		// Instruction Register
+	wire [4:0] 		pc_out;		// Program Counter
+	wire [3:0] 		state_o;	// FSM Current State
+	wire [15:0] 	alu_a;		// ALU A-Side Input
+	wire [15:0] 	alu_b;		// ALU B-Side Input
+	wire [15:0] 	alu_out;	// ALU Current Output
+	wire [15:0] 	rq0;		// RF[0] Contents
+	wire [15:0] 	mux_out;	// Datapath Mux Output
 
-	assign S = SW[17:15]; //3-bit select line
+	assign LEDR = SW; 			//assigns the red LED's to the input switches
+	assign S = SW[17:15]; 		//3-bit select line
 	assign clock = KEY[0];
 	assign reset = KEY[1];
 	
 	//The Processor
-	processor PROCESSOR (clock, reset, alu_a, alu_b, alu_out, ir_out, mux_out, pc_out, rq0, state_o);
+	processor PROCESSOR (
+		clock, 
+		reset, 
+		alu_a, 
+		alu_b, 
+		alu_out, 
+		ir_out, 
+		mux_out, 
+		pc_out, 
+		rq0, 
+		state_o
+	);
+	
 	//7 to 1 Multiplexer
 	mux7_1 #(.N(16)) MUX ({7'b0000_000, pc_out, state_o}, // S = 0 => HEX7 = 0; HEX6, HEX5 = PC; HEX4 = Current State;
 																  alu_a, // S = 1 => HEX7, 6, 5, 4 = ALU_A (A-side input to ALU)
