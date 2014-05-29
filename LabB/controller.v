@@ -57,8 +57,11 @@ module controller (
     //-----------------------
     // Registers
     //-----------------------
-    reg  [3:0]  current_state = 0;  // State machines current state
-    reg  [3:0]  next_state = 0;     // State machines next state
+  //  reg  [3:0]  current_state = 0;  // State machines current state
+  //  reg  [3:0]  next_state = 0;     // State machines next state
+    reg [3:0] State = 0;
+    
+    
     
     //-----------------------
     // State Machine States
@@ -84,8 +87,138 @@ module controller (
     localparam  [3:0]   SUBTRACT = 4'b0100;         // SUBTRACT Instruction 0100
     localparam  [3:0]   HALT = 4'b0101;             // HALT Instruction 0101
 
-    assign state_o = current_state;
-                    
+    //assign state_o = current_state;
+    assign state_o = State;
+    
+    always @ (posedge clock) begin
+        if ( reset ) begin
+                        pc_up <= 0;
+                        ld <= 0;
+                        pc_clr <= 1;
+						rf_s <= 0;
+						rf_w_wr <= 0;
+						d_wr <= 0;
+						rf_ra_rd <= 0;
+						rf_rb_rd <= 0;
+                        alu_s0 <= 0;
+                        State <= INIT_STATE;
+        end else begin
+            case(State) 
+                INIT_STATE: 
+                    begin
+                        pc_up <= 0;
+                        ld <= 0;
+                        pc_clr <= 1;
+						rf_s <= 0;
+						rf_w_wr <= 0;
+						d_wr <= 0;
+						rf_ra_rd <= 0;
+						rf_rb_rd <= 0;
+                        alu_s0 <= 0;
+                        State <= FETCH_STATE;
+                    end
+                FETCH_STATE: 
+                    begin
+                        pc_clr <= 0;
+                        pc_up <= 1;
+                        ld <= 1;
+                        State <= DECODE_STATE;
+                    end 
+                DECODE_STATE:
+                    begin   
+                        case ( instruction[15:12] )
+                            NOOP: 
+                                begin
+                                    State <= NOOP_STATE;
+                                end 
+                            LOAD: 
+                                begin
+                                    State <= LOAD_A_STATE;
+                                end
+                            STORE: 
+                                begin
+                                    State <= STORE_STATE;
+                                end
+                            ADD: 
+                                begin
+                                    State <= ADD_STATE;
+                                end
+                            SUBTRACT: 
+                                begin
+                                    State <= SUBTRACT_STATE;
+                                end
+                            HALT: 
+                                begin
+                                    State <= HALT_STATE;
+                                end
+                            default: 
+                                begin
+                                    State <= 4'bxxxx;
+                                end
+                        endcase
+                    end
+                NOOP_STATE: 
+                    begin
+                        State <= FETCH_STATE;
+                    end
+                LOAD_A_STATE:   
+                    begin
+                        d_addr <= instruction[11:4];
+                        rf_s <= 1;
+                        rf_w_addr <= instruction[3:0];
+                        State <= LOAD_B_STATE;
+                    end 
+                LOAD_B_STATE:   
+                    begin
+                        d_addr <=  instruction[11:4];
+                        rf_s <= 1;
+                        rf_w_addr <= instruction[3:0];
+                        rf_w_wr <= 1;
+                        State <= FETCH_STATE;
+                    end
+                STORE_STATE:    
+                    begin
+                        d_addr <= instruction[7:0];
+                        d_wr <= 1;
+                        rf_ra_addr <= instruction[11:8];
+                        rf_ra_rd <= 1;
+                        State <= FETCH_STATE;   
+                    end
+                ADD_STATE:  
+                    begin
+                        rf_w_addr <= instruction[3:0];
+                        rf_w_wr <= 1;
+                        rf_ra_addr <= instruction[11:8];
+                        rf_ra_rd <= 1;
+                        rf_rb_addr <= instruction[7:4];
+                        rf_rb_rd <= 1;
+                        alu_s0 <= 1;
+                        State <= FETCH_STATE;
+                    end
+                SUBTRACT_STATE: 
+                    begin
+                        rf_w_addr <= instruction[3:0];
+                        rf_w_wr <= 1;
+                        rf_ra_addr <= instruction[11:8];
+                        rf_ra_rd <= 1;
+                        rf_rb_addr <= instruction[7:4];
+                        rf_rb_rd <= 1;
+                        alu_s0 <= 2;
+                        State <= FETCH_STATE;
+                    end
+                HALT_STATE: 
+                    begin 
+                        State <= HALT_STATE;
+                    end
+                default: 
+                    begin
+                        State <= 4'bxxxx;
+                    end
+            endcase
+        end //end else
+    end //end always
+ endmodule
+ /*                   
     always @ ( current_state, instruction ) 
         begin
             case ( current_state )
@@ -111,15 +244,6 @@ module controller (
                     end 
                 DECODE_STATE:
                     begin   
-                        pc_up = pc_up;
-                        ld = ld;
-                        pc_clr = pc_clr;
-                        rf_s = rf_s;
-                        rf_w_wr = rf_w_wr;
-                        d_wr = d_wr;
-                        rf_ra_rd = rf_ra_rd;
-                        rf_rb_rd = rf_rb_rd;
-                        alu_s0 = alu_s0;
                         case ( instruction[15:12] )
                             NOOP: 
                                 begin
@@ -222,4 +346,4 @@ module controller (
                     current_state <= next_state;
                 end
         end
-endmodule
+endmodule*/
