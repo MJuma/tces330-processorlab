@@ -77,7 +77,7 @@ module LabB (
 
 
     // 8 to 1 Multiplexer
-    mux8_1 mux0 (
+    mux8_1 #(.N(16)) mux0 (
         .input0 ( {7'b0000_000, pc_out, state_o} ), // S = 0 => HEX7 = 0; HEX6, HEX5 = PC; HEX4 = Current State;
         .input1 ( alu_a ),                          // S = 1 => HEX7, 6, 5, 4 = ALU_A (A-side input to ALU)
         .input2 ( alu_b ),                          // S = 2 => HEX7, 6, 5, 4 = ALU_B (B-side input to ALU)

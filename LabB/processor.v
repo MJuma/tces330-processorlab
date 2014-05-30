@@ -42,8 +42,8 @@ module processor (
     //-----------------------
     // Wires
     //-----------------------
-    wire    [4:0]  ir_inst;    // Address of instruction in memory
-    wire    [15:0]  ir_addr;    // Address of next instruction
+    wire    [15:0]  ir_inst;    // Address of instruction in memory
+    wire    [4:0]  ir_addr;    // Address of next instruction
     wire    [7:0]   d_addr;     // Data Memory address
     wire            d_wr;       // Data Memory write enable
     wire            rf_s;       // Register File select
@@ -58,15 +58,15 @@ module processor (
     assign pc_out = ir_inst[4:0];
 
     InstructionMemory inst_mem0 ( 
-        .address ( ir_inst ),
+        .address ( ir_addr ),
         .clock ( clock ), 
-        .q ( ir_addr )
+        .q ( ir_inst )
     );
     
     control_unit con_unit0 (
         .clear ( reset ),
         .clock ( clock ),
-        .ir_inst ( ir_addr ),
+        .ir_inst ( ir_inst ),
         .alu_s0 ( alu_s0 ),
         .d_addr ( d_addr ),
         .d_wr ( d_wr ),
