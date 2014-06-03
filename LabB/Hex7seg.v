@@ -1,13 +1,11 @@
 /*
 TCES 330 Spring 2014
 05/27/2014
-Brendan Crawford
 Mohammad Juma
-Antonio Orozco
 Lab B
 This module implements a 7-segment decoder (0 through 9)
 */
-module Hex7seg( 
+module hex7seg( 
     c, 
     
     display
@@ -41,7 +39,8 @@ module Hex7seg(
   // Note: Segment 6 is the left most bit
     always @ ( c )
         begin
-            case ( c )		                    // 6......0 <----
+            case ( c )		                    
+                0: display = 7'b100_0000;       // 0
                 1: display = 7'b111_1001;       // 1
                 2: display = 7'b010_0100;       // 2
                 3: display = 7'b011_0000;       // 3

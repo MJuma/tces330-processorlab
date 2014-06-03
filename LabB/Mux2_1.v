@@ -1,18 +1,33 @@
-/*
-R. Antonio Orozco
-5/26/2014
-Homework6-Part3
-This module implements a 2 to 1 multiplexer
-*/
-module Mux2_1( X, Y, S, F );
-	parameter N = 16;
-	input [N-1:0] X, Y; // input lines
-	input S; // select line
-	output reg [N-1:0] F; // output
-	
-	always@(X,Y,S) //the statements it contains are evaluated in the order given
-	if(S == 0) 
-		F = X; // if the select line is 0, then output = X
-	else 
-		F = Y; // else the output = Y
+module mux2_1 (
+    x, 
+    y, 
+    s, 
+    f 
+);
+
+    //-----------------------
+    // Parameters
+    //-----------------------
+    parameter N = 2;
+    
+    //-----------------------
+    // Input Ports
+    //-----------------------
+    input   [N-1:0] x;      // first input
+    input   [N-1:0] y;      // second input
+    input           s;      // selec line
+    
+    //-----------------------
+    // Output Ports
+    //-----------------------
+    output  reg [N-1:0] f;  // output
+
+	always @ ( x, y, s ) begin
+        if ( s == 0 ) begin
+            f = x; // if the select line is 1, then output = x
+        end    
+        else begin
+            f = y; // else the output = y
+        end
+    end
 endmodule 

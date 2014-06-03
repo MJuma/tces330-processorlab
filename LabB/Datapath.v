@@ -1,26 +1,108 @@
-module DataPath(Clock, Reset, D_addr, D_wr, RF_s, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Ra_rd,
- RF_Rb_addr, RF_Rb_rd, Alu_s0, alu_a, alu_b, alu_out, rq0, mux_out);
-	input [7:0] D_addr;
-	input D_wr, Clock, RF_s, RF_Ra_rd, RF_Rb_rd, RF_W_wr, Reset;
-	input [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr;
-	input [2:0] Alu_s0;
-	output	[15:0] alu_a, alu_b, alu_out, rq0, mux_out;
-	
-	assign alu_a = Ra_data;
-	assign alu_b = Rb_data;
-	assign alu_out = Alu_s0;
-	assign rq0 = R_data;
-	assign mux_out = MUX_Out;
-	
-	wire [15:0] R_data, Ra_data, Rb_data, ALU_Out, MUX_Out;
-	
-	//Refrence: module DataMemory (address,clock,data,wren,q);
-	//module Mux2_1( X, Y, S, F );
-	//module RegisterFile( W_data, W_addr, W_en, Ra_addr, Rb_addr, Ra_en, Rb_en, Clk, Rst, Ra_data, Rb_data);
-	//module ALU (A, B, S, Q);
-	
-	DataMemory DATAMEM (D_addr, Clock, Ra_data, D_wr, R_data);
-	Mux2_1 MUX (ALU_Out, R_data, RF_s, MUX_Out);
-	RegisterFile REGFILE (MUX_Out, RF_W_addr, RF_W_wr, RF_Ra_addr, RF_Rb_addr, RF_Ra_rd, RF_Rb_rd, Clock, Reset, Ra_data, Rb_data);
-	ALU OPERATION (Ra_data, Rb_data, Alu_s0, ALU_Out);
-endmodule 
+module datapath (
+    clock,
+    d_addr,
+    d_wr,
+    reset,
+    rf_ra_addr,
+    rf_ra_rd,
+    rf_rb_addr,
+    rf_rb_rd,
+    rf_s,
+    rf_w_addr,
+    rf_w_wr,
+    alu_s0,
+    
+    alu_a,
+    alu_b,
+    alu_out,
+    mux_out,
+    rq0
+);
+
+    //-----------------------
+    // Input Ports
+    //-----------------------
+    input           clock;
+    input           reset;
+    input   [7:0]   d_addr;     // Address going into the Data RAM
+    input           d_wr;
+    input           rf_s;
+    input   [3:0]   rf_ra_addr;
+    input           rf_ra_rd;
+    input   [3:0]   rf_rb_addr;
+    input           rf_rb_rd;
+    input   [3:0]   rf_w_addr;
+    input           rf_w_wr;
+    input   [2:0]   alu_s0;    
+    
+    
+    //-----------------------
+    // Output Ports
+    //-----------------------
+    output  [15:0]  alu_a;
+    output  [15:0]  alu_b;
+    output  [15:0]  alu_out;
+    output  [15:0]  mux_out;
+    output  [15:0]  rq0;
+    
+    //-----------------------
+    // Wires
+    //-----------------------
+    wire    [15:0]  r_data;
+    wire    [15:0]  ra_data;
+    wire    [15:0]  rb_data;
+    //wire    [15:0]  alu_out;
+    //wire    [15:0]  mux_out;
+    
+    //To display in the HEX's displays
+	assign alu_a = ra_data; 
+	assign alu_b = rb_data;
+	//assign alu_out = ALU_Out;
+	assign rq0 = r_data;
+	//assign mux_out = MUX_Out;
+    
+    DataMemory d_mem0 (
+        .address ( d_addr ),
+        .clock ( clock ),
+        .data ( ra_data ),
+        .wren ( d_wr ),
+        .q ( r_data )
+    );
+    
+    mux2_1 #(.N(16)) mux0 (
+        .x ( alu_out ),
+        .y ( r_data ),
+        .s ( rf_s ),
+        .f( mux_out )
+    ); 
+    
+    register_file reg_file0 (
+        .clock ( clock ),
+        .ra_addr ( rf_ra_addr ),
+        .ra_en ( rf_ra_rd ),
+        .rb_addr ( rf_rb_addr ),
+        .rb_en ( rf_rb_rd ),
+        .reset ( reset ),
+        .w_addr ( rf_w_addr ),
+        .w_data ( mux_out ),
+        .w_en ( rf_w_wr ),
+        .ra_data ( ra_data ),
+        .rb_data ( rb_data )
+    );
+
+    alu operation0 (
+        .a ( ra_data ),
+        .b ( rb_data ),
+        .select ( alu_s0 ),
+        .q ( alu_out )
+    );
+endmodule
+
+    
+    
+    
+    
+    
+    
+    
+    

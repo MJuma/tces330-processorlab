@@ -18,28 +18,28 @@ module program_counter (
     //-----------------------
     // Input Ports
     //-----------------------
-    input   clock;                  // System clock
-    input   clear;                  // System clear
-    input   up;                     // Increment program counter input
+    input   clock;              // System clock
+    input   clear;              // System clear
+    input   up;                 // Increment program counter input
 
     //-----------------------
     // Output Ports
     //-----------------------
-    output  reg [4:0]  address;    // Next instructions address
+    output  [4:0]  address;    // Next instructions address
     
-    always @ ( posedge clock ) 
-        begin
-            if ( clear ) 
-                begin
-                    address <= 0;
-                end
-            else if ( up ) 
-                begin
-                    address <= address + 1'b1;
-                end
-            else 
-                begin
-                    address <= address;
-                end
+    //-----------------------
+    // Registers
+    //-----------------------
+    reg     [4:0]   q;
+    
+    always @ ( posedge clock ) begin
+        if ( clear ) begin
+            q <= 0;
         end
+        else if ( up ) begin
+            q <= q + 1'b1;
+        end
+    end
+        
+    assign address = q;
 endmodule

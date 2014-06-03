@@ -20,29 +20,29 @@ module instruction_register (
     //-----------------------
     // Input Ports
     //-----------------------
-    input           clock;              // Clock
-    input   [15:0]  data;               // Data from the ROM
-    input           ld;                 // Load next instruction
-    input           clear;              // Clear input of the register
+    input           clock;          // Clock
+    input   [15:0]  data;           // Data from the ROM
+    input           ld;             // Load next instruction
+    input           clear;          // Clear input of the register
     
     //-----------------------
     // Output Ports
     //-----------------------
-    output  reg [15:0]  instruction;    // Current instruction
+    output  [15:0]  instruction;    // Current instruction
     
-    always @ ( posedge clock ) 
-        begin
-            if ( clear ) 
-                begin
-                    instruction <= 0;
-                end
-            else if ( ld ) 
-                begin
-                    instruction <= data;
-                end
-            else
-                begin
-                    instruction <= instruction;
-                end
+    //-----------------------
+    // Registers
+    //-----------------------
+    reg     [15:0]  q;
+   
+    always @ ( posedge clock ) begin
+        if ( clear ) begin
+            q <= 0;
         end
+        else if ( ld ) begin
+            q <= data;
+        end
+    end
+        
+    assign instruction = q;
 endmodule

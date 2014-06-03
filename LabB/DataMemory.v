@@ -169,6 +169,6 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL DataMemory.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DataMemory.cmp FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DataMemory.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL DataMemory_inst.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL DataMemory_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DataMemory_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf
