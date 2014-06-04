@@ -99,7 +99,7 @@ module LabB (
         .alu_out ( alu_out ), 
         .ir_instruction ( ir_instruction ), 
         .mux_out ( mux_out ),
-        .pc_address ( pc_out ), 
+        .pc_address ( pc_address ), 
         .rf_ra_addr_out ( rf_ra_addr_out ), 
         .rf_rb_addr_out ( rf_rb_addr_out ),
         .rf_w_addr_out ( rf_w_addr_out ),
@@ -110,16 +110,17 @@ module LabB (
 
     // 8 to 1 Multiplexer
     mux8_1 #(.N(16)) mux0 (
-        .input0 ( {pc_address, state_o} ), // S = 0 => HEX7 = 0; HEX6, HEX5 = PC; HEX4 = Current State;
+        .input0 ( {7'b0, pc_address, state_o} ),          // S = 0 => HEX7 = 0; HEX6, HEX5 = PC; HEX4 = Current State;
         .input1 ( alu_a ),                          // S = 1 => HEX7, 6, 5, 4 = ALU_A (A-side input to ALU)
         .input2 ( alu_b ),                          // S = 2 => HEX7, 6, 5, 4 = ALU_B (B-side input to ALU)
         .input3 ( alu_out ),                        // S = 3 => HEX7, 6, 5, 4 = ALU_Out (ALU output)
-        .input4 ( {rf_w_addr_out, 
+        .input4 ( {4'b0,
+                   rf_w_addr_out, 
                    rf_ra_addr_out, 
                    rf_rb_addr_out} ),               // S = 4 => Unused (use this for your own debug information)
         .input5 ( rq0 ),                            // S = 5 => HEX7, 6, 5, 4 = Register File 0 contents
         .input6 ( mux_out ),                        // S = 6 => HEX7, 6, 5, 4 = Datapath Multiplexer output
-        .input7 ( 16'h0000 ),                       // S = 7 => Unused (use this for your own debug information) 
+        .input7 ( 16'b0 ),                           // S = 7 => Unused (use this for your own debug information) 
         .select ( select ),                         // The Select line
         .q ( q )                                    // The output
     );

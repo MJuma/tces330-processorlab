@@ -1,0 +1,17 @@
+{C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/Crontroller.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/Crontroller.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Controller
+
+Top level modules:
+	Controller
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testConroller
+** Warning: C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v(62): (vlog-2643) Unterminated string literal continues onto next line.
+
+
+Top level modules:
+	testConroller
+
+} {} {}}

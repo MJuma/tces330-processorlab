@@ -5,7 +5,7 @@ module control_unit (
     alu_s0,
     d_addr,
     d_wr,
-    instruction,
+    ir_instruction,
     pc_address,
     rf_ra_addr,
     rf_ra_rd,
@@ -41,7 +41,7 @@ module control_unit (
     /* Output to ALU */
     output  [2:0]   alu_s0;         // ALU select
     output  [4:0]   pc_address;     // Address of next instuction
-    output  [15:0]  instruction;    // STATE: instruction register
+    output  [15:0]  ir_instruction;    // STATE: instruction register
     output  [3:0]   state_o;        // STATE: FSM State
     
     //-----------------------

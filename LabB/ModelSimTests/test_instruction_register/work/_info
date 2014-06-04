@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_instruction_register
+vinstruction_register
+Z1 IXP?71^z8_mEbhkje0D;kW2
+Z2 V>M:9?F^_6enAYoCkM6dE53
+Z3 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_instruction_register
+Z4 w1401765524
+Z5 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/instruction_register.v
+Z6 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/instruction_register.v
+L0 11
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 kkBY6Mkn5OaZhSfndPW7;3
+Z10 !s108 1401823494.677000
+Z11 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/instruction_register.v|
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/instruction_register.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestInstruction_register
+!i10b 1
+Z13 !s100 bgnI=8W<zF8VhCh0no;bY1
+Z14 I`g6J94LVaIbg7Smd<Em7E3
+Z15 VeD?c2I?7Ec6Q]R:PkDBng0
+R3
+Z16 w1401827656
+Z17 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v
+Z18 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1401827666.623000
+!s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v|
+!s101 -O0
+R8
+Z19 ntest@instruction_register

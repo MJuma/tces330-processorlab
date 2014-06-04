@@ -1,0 +1,17 @@
+{C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/instruction_register.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/instruction_register.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instruction_register
+
+Top level modules:
+	instruction_register
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testInstruction_register
+** Warning: C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_instruction_register/testInstruction_register.v(34): (vlog-2643) Unterminated string literal continues onto next line.
+
+
+Top level modules:
+	testInstruction_register
+
+} {} {}}

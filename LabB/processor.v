@@ -60,7 +60,7 @@ module processor (
         .alu_s0 ( alu_s0 ),
         .d_addr ( d_addr ),
         .d_wr ( d_wr ),
-        .instruction ( ir_instruction ),
+        .ir_instruction ( ir_instruction ),
         .pc_address ( pc_address ),
         .rf_ra_addr ( rf_ra_addr ),
         .rf_ra_rd ( rf_ra_rd ),
@@ -72,7 +72,7 @@ module processor (
         .state_o ( state_o )
     );
     
-    datapath dp0(
+    datapath dp0 (
         .clock ( clock ),
         .d_addr ( d_addr ),
         .d_wr ( d_wr ),

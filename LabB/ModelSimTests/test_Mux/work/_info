@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_Mux
+vMux2_1
+Z1 I;nTkg4W3;3gCcA`00^52:2
+Z2 VlGf<B11D:9JHd?0f<0c8l1
+Z3 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_Mux
+Z4 w1401416953
+Z5 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/Mux2_1.v
+Z6 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/Mux2_1.v
+L0 7
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@mux2_1
+Z10 !s100 JnjGdf=@VUQZ9knIlMd?[2
+Z11 !s108 1401823633.558000
+Z12 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/Mux2_1.v|
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/Mux2_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_Mux2_1
+!i10b 1
+Z14 !s100 n?XJh[U_bYbI:E<XJT;U;1
+Z15 IJC1[WCB6nXFKChYz2I6_40
+Z16 V<c1ZgB^58h:n^WI_4c08A2
+R3
+Z17 w1401827828
+Z18 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v
+Z19 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1401827837.396000
+!s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v|
+!s101 -O0
+R8
+Z20 ntest_@mux2_1

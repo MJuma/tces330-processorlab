@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_program_counter
+vprogram_counter
+Z1 I=0Lj^FBRB4>4nAPfRJ5oI0
+Z2 V^FRW0@jMP^?on0Nfl[FZ62
+Z3 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_program_counter
+Z4 w1401766210
+Z5 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/program_counter.v
+Z6 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/program_counter.v
+L0 10
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 k8cP>6jXh`Y:P4c9z@DAE3
+Z10 !s108 1401823832.178000
+Z11 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/program_counter.v|
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/program_counter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_program_counter
+!i10b 1
+Z13 !s100 ?m1Pb_Jdg5J@N7nPPfN8T0
+Z14 Ib;DTlPV0CeAXCO?K>:]b^3
+Z15 VgI>734YG[Ug@hf_MlRUhO2
+R3
+Z16 w1401827981
+Z17 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/test_program_counter.v
+Z18 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/test_program_counter.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1401827991.103000
+!s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/test_program_counter.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_program_counter/test_program_counter.v|
+!s101 -O0
+R8

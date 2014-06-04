@@ -1,0 +1,106 @@
+C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/control_unit.v {1 {vlog -work work C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/control_unit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/WriteDecoder.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/WriteDecoder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WriteDecoder
+
+Top level modules:
+	WriteDecoder
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/DataMemory.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/DataMemory.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module DataMemory
+
+Top level modules:
+	DataMemory
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/InstructionMemory.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/InstructionMemory.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InstructionMemory
+
+Top level modules:
+	InstructionMemory
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Crontroller.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Crontroller.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Controller
+
+Top level modules:
+	Controller
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterOEN.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterOEN.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module RegisterOEN
+
+Top level modules:
+	RegisterOEN
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Datapath.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Datapath.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/program_counter.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/program_counter.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module program_counter
+
+Top level modules:
+	program_counter
+
+} {} {}} C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/testProcessor.v {1 {vlog -work work C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/testProcessor.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testProcessor
+
+Top level modules:
+	testProcessor
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ALU.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ALU.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ReadDecoder.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ReadDecoder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ReadDecoder
+
+Top level modules:
+	ReadDecoder
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Mux2_1.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Mux2_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux2_1
+
+Top level modules:
+	Mux2_1
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterFile.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterFile.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/instruction_register.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/instruction_register.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module instruction_register
+
+Top level modules:
+	instruction_register
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/processor.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/processor.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module processor
+
+Top level modules:
+	processor
+
+} {} {}}

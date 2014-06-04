@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_FSM_controller
+vController
+Z1 !s100 ]@9k`h5Zf1mV2He4aZFNM2
+Z2 I7oB<@hN:;Qfj`BN<ASJ4e0
+Z3 Vz_jzDi7kD1PGSReoL8;f30
+Z4 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_FSM_controller
+Z5 w1401773411
+Z6 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/Crontroller.v
+Z7 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/Crontroller.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/Crontroller.v|
+Z10 o-work work -O0
+Z11 n@controller
+!i10b 1
+!s85 0
+Z12 !s108 1401827432.513000
+Z13 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/Crontroller.v|
+!s101 -O0
+vtestConroller
+!i10b 1
+Z14 !s100 1G`cTm[AI3z1moA^lY4aG3
+Z15 IF1P;lC<G>BGPZ0Q;`f[V93
+Z16 VL:kbBZlF?kaaY=6]gFa7n0
+R4
+Z17 w1401827420
+Z18 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v
+Z19 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1401827432.841000
+!s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_FSM_controller/testController.v|
+!s101 -O0
+R10
+Z20 ntest@conroller

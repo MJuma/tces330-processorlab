@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_alu
+vALU
+Z1 IPWLf<62BXiOC@lzoUlGdT3
+Z2 VNMcT=[Am?nGNE1UKzahgo3
+Z3 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB\ModelSimTests\test_alu
+Z4 w1401226783
+Z5 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v
+Z6 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v
+L0 7
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@a@l@u
+Z10 !s100 R_g3G@6oWZT0;lWEMUcb73
+Z11 !s108 1401823049.030000
+Z12 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v|
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestALU
+!i10b 1
+Z14 !s100 9BNmF3P4e?5HHen<AZjR72
+Z15 IhG6Bd<W3CTK?BcB=Kokka2
+Z16 VM1YWmWi;RkWjklg>8U4@Q0
+R3
+Z17 w1401826619
+Z18 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v
+Z19 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v
+L0 8
+R7
+r1
+!s85 0
+31
+!s108 1401826635.105000
+!s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v|
+!s101 -O0
+R8
+Z20 ntest@a@l@u

@@ -1,0 +1,17 @@
+{C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test_Mux2_1
+** Warning: C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/test_Mux2_1.v(27): (vlog-2643) Unterminated string literal continues onto next line.
+
+
+Top level modules:
+	test_Mux2_1
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/Mux2_1.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_Mux/Mux2_1.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Mux2_1
+
+Top level modules:
+	Mux2_1
+
+} {} {}}

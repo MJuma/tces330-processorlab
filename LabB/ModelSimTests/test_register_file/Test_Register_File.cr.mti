@@ -1,0 +1,41 @@
+{C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module RegisterOEN
+
+Top level modules:
+	RegisterOEN
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testRegisterFile
+** Warning: C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v(62): (vlog-2643) Unterminated string literal continues onto next line.
+
+
+Top level modules:
+	testRegisterFile
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+** Warning: (vlog-7) Failed to open lock file "C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/work/_lock" in create mode.
+
+Permission denied. (errno = EACCES)
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module WriteDecoder
+
+Top level modules:
+	WriteDecoder
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/ReadDecoder.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/ReadDecoder.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ReadDecoder
+
+Top level modules:
+	ReadDecoder
+
+} {} {}}

@@ -1,0 +1,301 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB
+vALU
+Z1 !s100 V4;6jYz`Wl@H;a<<]:;821
+Z2 I93dHZVT6`j5P[9Rb;ckzL2
+Z3 VNMcT=[Am?nGNE1UKzahgo3
+Z4 dC:\Users\Asus\Dropbox\TCES-330 Digital System Design\LabB
+Z5 w1401226783
+Z6 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ALU.v
+Z7 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ALU.v
+L0 7
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ALU.v|
+Z10 o-work work -O0
+Z11 n@a@l@u
+Z12 !s108 1401825217.742000
+Z13 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol_unit
+!i10b 1
+!s100 IRSce_8?b3dJ0KfNoh[RN1
+Ia01nF47mKfoKDKc=a@FY13
+VFZjIVIW=RUQ7<Tma7;N5K2
+Z14 dC:\Users\Slapshot\Dropbox\Code\Verilog\TCES330\tces330-processorlab\LabB
+w1401837788
+8C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/control_unit.v
+FC:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/control_unit.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1401840091.549000
+!s107 C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/control_unit.v|
+!s90 -reportprogress|300|-work|work|C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/control_unit.v|
+!s101 -O0
+R10
+vController
+Z15 !s100 nYFlh`;dR5UXFb<SK30EQ1
+Z16 InJbd<DT9C^YfD^YY=>Y310
+Z17 Vz_jzDi7kD1PGSReoL8;f30
+R4
+Z18 w1401478936
+Z19 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Crontroller.v
+Z20 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Crontroller.v
+L0 1
+R8
+r1
+31
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Crontroller.v|
+R10
+Z22 n@controller
+Z23 !s108 1401825219.193000
+Z24 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Crontroller.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDataMemory
+Z25 !s100 ?UhLVz[R<?BhQ77>c3QLY0
+Z26 I4_3_GmN1Gfc1lm:FOKZnc1
+Z27 VJM1^9C`2gWBBW:=kLWfaE3
+R4
+Z28 w1401416641
+Z29 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/DataMemory.v
+Z30 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/DataMemory.v
+L0 39
+R8
+r1
+31
+Z31 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/DataMemory.v|
+R10
+Z32 n@data@memory
+Z33 !s108 1401825220.410000
+Z34 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/DataMemory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDatapath
+Z35 !s100 [M@lJ`f0a;_U;i5kIHIjU1
+Z36 I=]hSZXb5TZ=SE>7ZOjJ9S2
+Z37 VLALAMgZ@;J>`G2>bJdGfk0
+R4
+Z38 w1401759847
+Z39 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Datapath.v
+Z40 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Datapath.v
+L0 1
+R8
+r1
+31
+Z41 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Datapath.v|
+R10
+Z42 n@datapath
+Z43 !s108 1401825220.784000
+Z44 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Datapath.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vinstruction_register
+Z45 !s100 JIY;PkjHc]znT9nM0QmgF0
+Z46 IMjk<9oCR5KNAhD8D`3@E01
+Z47 V>M:9?F^_6enAYoCkM6dE53
+R4
+Z48 w1401765524
+Z49 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/instruction_register.v
+Z50 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/instruction_register.v
+L0 11
+R8
+r1
+31
+Z51 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/instruction_register.v|
+R10
+Z52 !s108 1401825221.081000
+Z53 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/instruction_register.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInstructionMemory
+Z54 !s100 ^jI^D>AVP2Jm>@>OER=Sf0
+Z55 IJ=XPOFA8?X>4hCTDAfe>;1
+Z56 V`EA2H_j8ABQAnaD7i87A`2
+R4
+Z57 w1401418930
+Z58 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/InstructionMemory.v
+Z59 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/InstructionMemory.v
+L0 39
+R8
+r1
+31
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/InstructionMemory.v|
+R10
+Z61 n@instruction@memory
+Z62 !s108 1401825221.315000
+Z63 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/InstructionMemory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMux2_1
+Z64 !s100 W6;H_9OVOHzB9zNbh<]WI2
+Z65 IOXi^V_=<Jn=9M>6K^52403
+Z66 VlGf<B11D:9JHd?0f<0c8l1
+R4
+Z67 w1401416953
+Z68 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Mux2_1.v
+Z69 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Mux2_1.v
+L0 7
+R8
+r1
+31
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Mux2_1.v|
+R10
+Z71 n@mux2_1
+Z72 !s108 1401825221.595000
+Z73 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/Mux2_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprocessor
+Z74 !s100 m<Kh8cZR1AIe0:^1Kod6@3
+Z75 IgOR:l0PkkSDU69OnQjPE]0
+Z76 VG4W5;KMgFASmQUAC4?[z72
+R4
+Z77 w1401760949
+Z78 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/processor.v
+Z79 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/processor.v
+L0 1
+R8
+r1
+31
+Z80 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/processor.v|
+R10
+Z81 !s108 1401825221.985000
+Z82 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/processor.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vprogram_counter
+Z83 !s100 ^W0j7[X`Bj5nFOf5L<SmK0
+Z84 INc`^?7eXGh;K<:`6be?m52
+Z85 V^FRW0@jMP^?on0Nfl[FZ62
+R4
+Z86 w1401766210
+Z87 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/program_counter.v
+Z88 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/program_counter.v
+L0 10
+R8
+r1
+31
+Z89 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/program_counter.v|
+R10
+Z90 !s108 1401825222.141000
+Z91 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/program_counter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vReadDecoder
+Z92 !s100 e9OW4<1nhXg4og5`KHo^c1
+Z93 Ik7Kjm;hAE=lf2kXLec;E<3
+Z94 VgB?ce3RPSU2FzhLbmbV`L0
+R4
+Z95 w1401768123
+Z96 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ReadDecoder.v
+Z97 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ReadDecoder.v
+L0 7
+R8
+r1
+31
+Z98 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ReadDecoder.v|
+R10
+Z99 n@read@decoder
+Z100 !s108 1401825222.719000
+Z101 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ReadDecoder.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterFile
+Z102 !s100 `Dze[>:T?DX5^B7DEf5HG0
+Z103 IOcMJFS:N>MO=P=2Hbd@g=0
+Z104 VUWob@F2oYj5UBi5oYHhc[1
+R4
+Z105 w1401480321
+Z106 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterFile.v
+Z107 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterFile.v
+L0 8
+R8
+r1
+31
+Z108 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterFile.v|
+R10
+Z109 n@register@file
+Z110 !s108 1401825223.046000
+Z111 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterFile.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRegisterOEN
+Z112 !s100 No^J_;I^cDW@m@>NEN<6F0
+Z113 I]M6;HlzN_HVD9M<30nmdX2
+Z114 V3;VPlI?CCWh<ifTTmm69A2
+R4
+Z115 w1401768082
+Z116 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterOEN.v
+Z117 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterOEN.v
+L0 7
+R8
+r1
+31
+Z118 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterOEN.v|
+R10
+Z119 n@register@o@e@n
+Z120 !s108 1401825223.405000
+Z121 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/RegisterOEN.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtestProcessor
+Z122 ITF<`R8Wdko65HHBiic;Wb1
+Z123 VJAV:l4m8V[=JeeCJ6987a1
+R14
+Z124 w1401832029
+Z125 8C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/testProcessor.v
+Z126 FC:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/testProcessor.v
+L0 6
+R8
+r1
+31
+R10
+Z127 ntest@processor
+!i10b 1
+Z128 !s100 =a7jfMbkik5d5lf9lEfTA3
+!s85 0
+Z129 !s108 1401840089.884000
+Z130 !s107 C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/testProcessor.v|
+Z131 !s90 -reportprogress|300|-work|work|C:/Users/Slapshot/Dropbox/Code/Verilog/TCES330/tces330-processorlab/LabB/testProcessor.v|
+!s101 -O0
+vWriteDecoder
+Z132 !s100 >dDkhOIO]>33dHSd:PLeO1
+Z133 IcZUe2^VXX3F`DLjSjXWSb0
+Z134 VTcllB2;XYHSX@LZJoPSX92
+R4
+Z135 w1401768092
+Z136 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/WriteDecoder.v
+Z137 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/WriteDecoder.v
+L0 8
+R8
+r1
+31
+Z138 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/WriteDecoder.v|
+R10
+Z139 n@write@decoder
+Z140 !s108 1401825224.591000
+Z141 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/WriteDecoder.v|
+!i10b 1
+!s85 0
+!s101 -O0

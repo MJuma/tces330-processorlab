@@ -46,12 +46,18 @@ module register_file (
     
     genvar I;
     
+    write_decoder #(.N(4)) write_dec (w_addr, w_en, w_d);
+    
+    read_decoder #(.N(4)) read_dec (ra_addr, rb_addr, ra_en, rb_en, ra_d, rb_d);
+    
+    /*
     // Write decoder
     decoder #(.N(4)) write_decoder (
         .w ( w_addr ),
         .e ( w_en ),
         .y ( w_d )
     );
+    
     
     // A side read decoder
     decoder #(.N(4)) read_a_decoder (
@@ -65,7 +71,7 @@ module register_file (
         .w ( rb_addr ),
         .e ( rb_en ),
         .y ( rb_d )
-    );
+    );*/
     
     register_dual_oe #(.N(N)) r0 (clock, w_d[0], w_data, 
                                   ra_d[0], rb_d[0], reset, 
