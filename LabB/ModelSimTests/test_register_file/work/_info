@@ -24,82 +24,82 @@ Z13 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital S
 !s85 0
 !s101 -O0
 vRegisterFile
-Z14 Id2FJF@c9j3CA>0eO5^`IP1
-Z15 VUWob@F2oYj5UBi5oYHhc[1
-R3
-Z16 w1401480321
-Z17 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v
-Z18 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v
+Z14 !s100 9c61HKnABlGUb3nQELCa33
+Z15 Id2FJF@c9j3CA>0eO5^`IP1
+Z16 VUWob@F2oYj5UBi5oYHhc[1
+Z17 dC:\Users\Asus\Dropbox\GitHub\tces330-processorlab\LabB\ModelSimTests\test_register_file
+Z18 w1401480321
+Z19 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v
+Z20 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v
 L0 8
 R7
 r1
 31
+Z21 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v|
 R8
-Z19 n@register@file
-Z20 !s100 9c61HKnABlGUb3nQELCa33
-Z21 !s108 1401824004.277000
-Z22 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v|
-Z23 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v|
+Z22 n@register@file
 !i10b 1
 !s85 0
+Z23 !s108 1401872283.039000
+Z24 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterFile.v|
 !s101 -O0
 vRegisterOEN
-Z24 IiMEJ8;^XD7n?e76kWMRef0
-Z25 V3;VPlI?CCWh<ifTTmm69A2
+Z25 IiMEJ8;^XD7n?e76kWMRef0
+Z26 V3;VPlI?CCWh<ifTTmm69A2
 R3
-Z26 w1401768174
-Z27 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v
-Z28 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v
+Z27 w1401768174
+Z28 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v
+Z29 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v
 L0 7
 R7
 r1
 31
 R8
-Z29 n@register@o@e@n
-Z30 !s100 [614?^Hk]ai849kQSzVg<0
-Z31 !s108 1401824005.421000
-Z32 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v|
-Z33 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v|
+Z30 n@register@o@e@n
+Z31 !s100 [614?^Hk]ai849kQSzVg<0
+Z32 !s108 1401824005.421000
+Z33 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v|
+Z34 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/RegisterOEN.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtestRegisterFile
 !i10b 1
-Z34 !s100 ;:X2Faokn2Wm=TeL^37>e1
-Z35 I3^;kc<Rj>Z=IPHFejRd083
-Z36 Vod^XW@^G0GAAFfa;m=GeH1
-R3
-Z37 w1401828345
-Z38 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v
-Z39 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v
+Z35 !s100 ;:X2Faokn2Wm=TeL^37>e1
+Z36 I3^;kc<Rj>Z=IPHFejRd083
+Z37 Vod^XW@^G0GAAFfa;m=GeH1
+R17
+Z38 w1401828345
+Z39 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v
+Z40 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v
 L0 10
 R7
 r1
 !s85 0
 31
-!s108 1401828357.532000
+!s108 1401872285.738000
 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v|
-!s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v|
+Z41 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/testRegisterFile.v|
 !s101 -O0
 R8
-Z40 ntest@register@file
+Z42 ntest@register@file
 vWriteDecoder
-Z41 I7UAYzGfOgRN4nj3S6iLG<1
-Z42 VTcllB2;XYHSX@LZJoPSX92
+Z43 I7UAYzGfOgRN4nj3S6iLG<1
+Z44 VTcllB2;XYHSX@LZJoPSX92
 R3
-Z43 w1401768168
-Z44 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v
-Z45 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v
+Z45 w1401768168
+Z46 8C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v
+Z47 FC:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v
 L0 8
 R7
 r1
 31
 R8
-Z46 n@write@decoder
-Z47 !s100 9QH]GXna7OL;Yh;f7U8EM1
-Z48 !s108 1401824006.663000
-Z49 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v|
-Z50 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v|
+Z48 n@write@decoder
+Z49 !s100 9QH]GXna7OL;Yh;f7U8EM1
+Z50 !s108 1401824006.663000
+Z51 !s107 C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v|
+Z52 !s90 -reportprogress|300|-work|work|C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_register_file/WriteDecoder.v|
 !i10b 1
 !s85 0
 !s101 -O0

@@ -1,4 +1,11 @@
-{C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v}
+{C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v} {2 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module testALU
 ** Warning: C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/testALU.v(48): (vlog-2643) Unterminated string literal continues onto next line.
@@ -6,12 +13,5 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	testALU
-
-} {} {}} {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v} {1 {vlog -work work {C:/Users/Asus/Dropbox/TCES-330 Digital System Design/LabB/ModelSimTests/test_alu/ALU.v}
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module ALU
-
-Top level modules:
-	ALU
 
 } {} {}}

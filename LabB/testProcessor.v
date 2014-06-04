@@ -17,8 +17,20 @@ module testProcessor;
  
 
 
-  processor P2014 (Clk, Reset, state_o, pc_address, ir_instruction, alu_a, alu_b, alu_out, rq0, mux_out,
-    rf_w_addr_out, rf_ra_addr_out, rf_rb_addr_out);
+  processor P2014 (
+    Clk,
+    Reset, 
+    alu_a, 
+    alu_b, 
+    alu_out, 
+    ir_instruction, 
+    mux_out,
+    pc_address, 
+    rf_ra_addr_out, 
+    rf_rb_addr_out,
+    rf_w_addr_out,
+    rq0,
+    state_o);
 
 initial // Clock generator
   begin
