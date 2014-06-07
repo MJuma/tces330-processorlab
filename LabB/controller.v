@@ -1,3 +1,14 @@
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module a controller for the processor that contains the 
+state machine of the processor.
+*/
+
 module controller (clock, reset, instruction,  alu_s0, ld, d_addr, d_wr, pc_clr, pc_up, rf_ra_addr, rf_ra_rd, rf_rb_addr,
     rf_rb_rd, rf_s, rf_w_addr, rf_w_wr, state_o);
     //inputs

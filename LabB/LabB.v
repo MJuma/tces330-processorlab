@@ -8,6 +8,7 @@ Lab B
 This module is a top level module that instantiates the processor
 and assigns input/output switches.
 */
+
 module LabB ( 
     SW,
     LEDR,

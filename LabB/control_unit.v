@@ -1,3 +1,15 @@
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module is the control unity of the processor 
+that handles the controllerand the instruction register
+in conjunctions with the program counter.
+*/
+
 module control_unit (
     clock,
     reset,

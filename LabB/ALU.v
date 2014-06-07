@@ -1,4 +1,12 @@
-/* This ALU has eight functions
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module implements an ALU
+   This ALU has eight functions
     if select == 0 the output is 0
     if select == 1 the output is A + B
     if select == 2 the output is A - B

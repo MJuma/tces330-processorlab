@@ -1,3 +1,14 @@
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module is a top level processor module 
+that instantiates the control unity and datapath.
+*/
+
 module processor (
     clock, 
     reset, 

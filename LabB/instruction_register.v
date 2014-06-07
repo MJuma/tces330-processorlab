@@ -8,6 +8,7 @@ Lab B
 This module is the instruction register that hold the next instruction of
 the processor.
 */
+
 module instruction_register ( 
     clear,
     clock, 

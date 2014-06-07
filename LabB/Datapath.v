@@ -1,3 +1,14 @@
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module implements a datapath for the processor 
+that handles the ALU and register file.
+*/
+
 module datapath (
     clock,
     d_addr,

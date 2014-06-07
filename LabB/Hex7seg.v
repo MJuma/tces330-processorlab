@@ -1,10 +1,13 @@
 /*
 TCES 330 Spring 2014
 05/27/2014
+Brendan Crawford
 Mohammad Juma
+Antonio Orozco
 Lab B
 This module implements a 7-segment decoder (0 through 9)
 */
+
 module hex7seg( 
     c, 
     

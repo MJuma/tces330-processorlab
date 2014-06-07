@@ -5,8 +5,9 @@ Brendan Crawford
 Mohammad Juma
 Antonio Orozco
 Lab B
-This module is an 8 to 1 mux.
+This module is a 16 wide an 8 to 1 mux.
 */
+
 module mux8_1 (
     input0, 
     input1,

@@ -7,6 +7,7 @@ Antonio Orozco
 Lab B
 This module is a program counter for the processor.
 */
+
 module program_counter ( 
     clear, 
     clock, 

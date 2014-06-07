@@ -5,6 +5,7 @@ Homework6-Part5
 Refrence: R. Gutmann, TCES 330, Spring 2011
 This module implements the write decoder for the register file
 */
+
 module write_decoder( W, E, Y );
   parameter N = 2;
   localparam M = 2**N; //N^2

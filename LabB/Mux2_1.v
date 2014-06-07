@@ -1,3 +1,13 @@
+/*
+TCES 330 Spring 2014
+05/27/2014
+Brendan Crawford
+Mohammad Juma
+Antonio Orozco
+Lab B
+This module is 2 to 1 mux.
+*/
+
 module mux2_1 (
     x, 
     y, 
