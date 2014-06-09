@@ -122,6 +122,8 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_parameter -name CYCLONEII_SAFE_WRITE RESTRUCTURE
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name MIF_FILE InstructionMemory.mif
+set_global_assignment -name MIF_FILE DataMemory.mif
 set_global_assignment -name VERILOG_FILE testProcessor.v
 set_global_assignment -name QIP_FILE InstructionMemory.qip
 set_global_assignment -name QIP_FILE DataMemory.qip
@@ -141,4 +143,6 @@ set_global_assignment -name VERILOG_FILE controller.v
 set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name VERILOG_FILE write_decoder.v
 set_global_assignment -name VERILOG_FILE read_decoder.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
