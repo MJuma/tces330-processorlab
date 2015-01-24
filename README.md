@@ -1,7 +1,15 @@
-tces330-processorlab
+TCES 330 - Programmable Processor
 ====================
 
-Laboratory Exercise B - Programmable Processor
+Objective:
+
+Design and implement a 7 instruction programmable processor.
+
+Authors:
+
 Brendan Crawford
+
 Mohammad Juma
+
 Antonio Orozco
+
